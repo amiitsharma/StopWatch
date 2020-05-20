@@ -21,7 +21,7 @@ function sta() {
 }
 function start()
 {
-   l=setInterval(sta, 10);
+   l=setInterval(sta, 1000);
 }
 function stop()
 {
