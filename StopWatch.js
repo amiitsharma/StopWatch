@@ -1,5 +1,6 @@
-let l;
+let l,k=-1;
 function sta() { 
+   
     let x=document.getElementById("x");
     let u=x.innerText;
     let m=+u+1;
@@ -19,19 +20,19 @@ function sta() {
         y.innerText=t.toString();
     }
 }
-function start()
+
+function start(v)
 {
-   l=setInterval(sta, 1000);
+    k++;
+   if(k==0)
+   {  
+   l=setInterval(sta,1000);
+   }
 }
 function stop()
 {
     clearInterval(l);
-    let x=document.getElementById("x");
-    let u=x.innerText;
-    x.innerText=u;
-    let y=document.getElementById("y");
-    let t=y.innerText;
-    y.innerText=t;
+    k=-1;
 }
 function reset()
 {
